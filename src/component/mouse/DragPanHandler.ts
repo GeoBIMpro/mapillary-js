@@ -132,7 +132,7 @@ export class DragPanHandler extends MouseHandlerBase<IMouseConfiguration> {
                 this._navigator.stateService.state$)
             .map(
                 ([frame, state]: [IFrame, State]): boolean => {
-                    return state !== State.Orbiting && (frame.state.currentNode.fullPano || frame.state.nodesAhead < 1);
+                    return state !== State.Flying && (frame.state.currentNode.fullPano || frame.state.nodesAhead < 1);
                 })
             .distinctUntilChanged()
             .switchMap(
