@@ -747,4 +747,12 @@ export class Viewer extends EventEmitter {
                         });
             });
     }
+
+    public fly(): void {
+        this._navigator.stateService.fly();
+    }
+
+    public walk(): void {
+        this._navigator.stateService.traverse();
+    }
 }
